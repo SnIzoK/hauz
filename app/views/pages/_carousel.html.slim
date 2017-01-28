@@ -1,0 +1,13 @@
+.large-6.medium-10.columns.medium-centered
+  .carousel_testemonials
+    .testemonials Хочу Вам висловити свою подяку, так як терміново знадобилася квартира у Львові вперше і квартира була хорошою, ставлення до клієнта відмінне. Дякую я залишилася задоволена
+    ul.owl-carousel
+      - Library.people.each_with_index do |p, index|
+        li.testemonials_box
+          .feedback.hidden
+            = p[:text]
+          .testemonials_img style="background-image: url(#{asset_path('sales/GB-special-picture-v1-1.jpg')})"
+          .text-testemonials class=(index ==1 ? 'active' : 'inactive')
+            = p[:name]
+            p
+              =p [:prof]

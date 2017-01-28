@@ -1,7 +1,4 @@
 $('document').ready ->
-  $('.owl-carousel').owlCarousel()
-
-
 
   thumb = $('.thumbs .img_box')
   #     знаходим контейнер з картинками, що будуть змінюватись
@@ -27,7 +24,7 @@ $('document').ready ->
   accordion_button = $('.accordion-button')
 
   accordion_button.on 'click', ->
-    
+
     #     changing button active
     $(this).parent().find('.accordion-button').removeClass('active')
     $(this).addClass('active')

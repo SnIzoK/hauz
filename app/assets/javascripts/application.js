@@ -17,6 +17,7 @@
 //= require owl.carousel
 
 //= require accordion
+//= require feedback
 //= require apartments
 //= require form
 //= require google_map
