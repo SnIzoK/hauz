@@ -1,0 +1,77 @@
+.header
+  position: fixed
+  z-index: 100
+  width: 100%
+  +clearfix
+  .left_part
+    float: left
+    width: calc(100% - 200px)
+    height: 50px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: calc(100% + 1px)
+      height: 100%
+      top: 0
+      left: 0
+      background: white
+    .logo
+      position: relative
+      width: 99px
+      height: 53px
+      display: inline-block
+      svg
+        padding: 10px
+
+  .middle_part
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%,0)
+    +breakpoint(small only)
+      display: none
+    .menu
+      display: inline-block
+      margin: 0 auto 
+      .header_link
+        padding: 0px 20px
+        font-size: 10px
+        text-transform: uppercase
+        display: inline-block
+        text-decoration: none
+        color: #8FA3AD
+        opacity: 1
+        border-bottom: 3px solid transparent
+        line-height: 48px
+        &:hover
+          border-bottom: 3px solid $lite-green
+          color: $lite-green
+  .right_part
+    float: right
+    width: 200px
+    height: 50px
+    position: relative
+    text-align: center
+    text-decoration: none
+    cursor: pointer
+    svg
+      position: absolute
+      transition: 0.25s
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+    &:hover
+      svg
+        .green
+          fill: darken(#82BC00, 2)
+
+    .text_botton
+      position: relative
+      line-height: 50px
+      padding-left: 15px
+      color: white
+      font-size: 12px
+      text-transform: uppercase
+

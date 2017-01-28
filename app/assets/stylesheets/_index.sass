@@ -1,0 +1,515 @@
+.main_baner
+  position: relative
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  .bg_baner
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    bottom: 0
+    background-size: cover
+    background-position: center
+  .main_baner_box
+    position: absolute
+    bottom: 0
+    text-align: center
+    width: 100%
+    .title_baner
+      font-size: 60px
+      font-weight: bold
+      text-transform: uppercase
+      color: white
+      +breakpoint(small only)
+        font-weight: normal
+        line-height: 1
+        padding-bottom: 20px
+    .sub_title_baner
+      font-size: 15px
+      font-style: italic
+      color: white
+      padding-bottom: 30px
+      +Ubuntu
+      +breakpoint(small only)
+        font-size: 16px
+    .learn_more
+      text-transform: uppercase
+      font-size: 8px
+      color: $lite-silver
+      padding-top: 30px
+      cursor: pointer
+      text-decoration: none
+      display: block
+      +Ubuntu
+      +breakpoint(small only)
+        display: none
+      .svg_icon
+        height: 50px
+        width: 30px
+        padding-top: 10px
+        // margin: 0 auto
+        +my_horizontal_align
+        svg
+          fill: white
+  .contact_facebock_box
+    position: absolute
+    left: 30px
+    bottom: 10px
+    color: $lite-silver
+    font-size: 10px
+    +breakpoint(small only)
+      display: none
+    .number_box
+      display: inline-block
+    .vertical_line
+      padding: 10px
+      display: inline-block
+    .facebock_box
+      display: inline-block
+      text-decoration: none
+      color: $lite-silver
+  .location_box
+    position: absolute
+    right: 30px
+    bottom: 10px
+    +breakpoint(small only)
+      display: none
+    .svg_icon_location
+      width: 25px
+      float: left
+    .location_street
+      color: $lite-silver
+      font-size: 10px
+      float: right
+      padding-left: 10px
+.about_house_selection
+  position: relative
+  padding-bottom: 50px
+  .baner_selections_img
+    position: absolute
+    top: 50px
+    left: -140px
+    width: 100%
+    height: 100%
+    z-index: 10
+    img
+      width: 500px
+    +breakpoint(small only)
+      position: relative
+      top: 0
+      left: 10px
+      img
+        width: 330px
+  .bg_baner_selections
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 60%
+    height: 100%
+    overflow: hidden
+    +breakpoint(small only)
+      display: none
+    .bg-img
+      background-size: contain
+      background-repeat: no-repeat
+      overflow: hidden
+      position: absolute
+      width: 100%
+      height: 100%
+      bottom: -10%
+      left: 0
+      background-position: right
+  .about_house_selection-text
+    position: relative
+    float: right
+  .house_selections
+    position: relative
+    top: 0
+    right: 0
+    padding-top: 100px
+    font-weight: bold
+    .text_box
+      width: 450px
+      font-style: italic
+      font-weight: normal
+    +breakpoint(small only)
+      font-weight: normal
+      .text_box
+        width: 100%
+  .about_house_conteiner
+    display: inline-block
+    position: relative
+    z-index: 10
+    padding: 0 30px 115px
+    // padding: 40px 60px 70px 0px
+    top: 50px
+    text-align: center
+    .svg_container
+      svg
+        height: 60px
+    .about_text
+      font-size: 10px
+      color: #F6921E
+    +breakpoint(medium only)
+      display: block
+      padding: 10px
+    +breakpoint(small only)
+      display: block
+      padding: 10px
+      .svg_container
+        svg
+          height: 80px
+    &.midle
+      top: 40px
+.about_wrapper
+  position: relative
+  height: 100%
+  width: 100%
+  overflow: hidden
+  .about_wrapper_bg
+    position: absolute
+    bottom: -7%
+    left: -18%
+    width: 70%
+    height: 100%
+    overflow: hidden
+    background-size: cover
+    background-repeat: no-repeat
+    +breakpoint(small only)
+      display: none
+  .about_title_conteiner  
+    padding: 50px 0
+    text-align: center
+    position: relative
+    .sub_title_blue
+      padding-bottom: 10px
+    hr
+      width: 40px
+      border-color: rgba($lite-blue, 0.3)
+      margin: 0 auto
+    .title
+      line-height: 1
+      padding: 25px
+    .text_box
+      padding: 0
+      font-style: italic
+    +breakpoint(small only)
+      .tetle
+        font-size: 28px
+      .text_box
+        font-size: 16px
+  .about_hauses_conteiner
+    position: relative
+    width: 100%
+    height: 450px
+    .img_container
+      position: relative
+      margin-bottom: 20px
+      &:before
+        content: ''
+        display: block
+        padding-bottom: 70%
+      .bg-img
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-size: cover
+        background-repeat: no-repeat
+      .svg_conteiner
+        position: absolute
+        bottom: 2%
+        right: 5%
+        svg
+          height: 2em
+          width: 2em
+    .sub_title 
+      color: $lite-green
+      display: inline
+      font-weight: bold
+      span
+        color: $lite-blue
+        padding-left: 5px
+    .text_box
+      padding-bottom: 10px
+    .more_info
+      color: $lite-green
+      text-decoration: none
+      font-size: 12px
+      +Ubuntu
+      svg
+        fill: $lite-green
+        width: 12px
+        position: relative
+        top: 3px
+      a
+        cursor: pointer
+      &:hover
+        color: darken(#82BC00, 5)
+    +breakpoint(small only)
+      margin-bottom: 50px
+      .sub_title
+        font-size: 26px
+      .text_box
+        font-size: 14px
+      .more_info
+        font-size: 16
+        font-weight: normal
+.sales_warapper
+  position: relative
+  // height: 100%
+  // width: 100%
+  .sales_warapper_left_box
+    padding-top: 20px
+    .sub_title_blue
+      padding: 10px 0
+    hr
+      width: 30px
+      border-color: rgba($lite-blue, 0.3)
+    .title
+      padding-top: 15px
+      width: 80%
+      line-height: 1
+    .text_box
+      padding-bottom: 40px
+    .button
+      background-color: $lite-green
+      color: white
+      text-align: center
+      &:hover
+        background-color: white
+        color: $lite-green
+        border: 1px solid $lite-green
+    .information_box
+      color: $blue
+      font-size: 10px
+      width: 350px
+      padding-top: 80px
+      margin-bottom: 20px
+    +breakpoint(small only)
+      text-align: center
+      .title
+        width: 100%
+      hr
+        margin: 0 auto
+      .text_box
+        font-size: 18px
+
+  .sales_warapper_right_box
+    position: absolute
+    overflow: hidden
+    top: 0
+    right: 0
+    width: 50%
+    height: 100%
+    +breakpoint(small only)
+      display: none
+    .bg_sales_warapper
+      // width: 100%
+      // height: 430px
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      // overflow: hidden
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: top
+    .sale_container
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 200px
+      .svg_conteiner
+        height: 100%
+        width: 100%
+      .text
+        color: white
+        text-align: center
+        width: 170px
+        font-size: 10px
+        padding-top: 10px 20px
+        line-height: 1.5
+        margin-bottom: 20px
+.testemonials_wrapper
+  height: 400px
+  padding-top: 50px
+  
+  .sub_title_blue
+    padding-bottom: 8px
+    text-align: center
+  hr
+    width: 35px
+    margin: 0 auto
+  .carousel_testemonials
+    padding-top: 50px
+    .testemonials
+      background-color: $lite-green
+      color: #F9F9F9
+      padding: 30px 65px
+      font-size: 12px
+    .owl-carousel
+      list-style-type: none
+      padding: 30px
+      .testemonials_box
+        position: relative
+        height: 100px
+        .testemonials_img
+          position: absolute
+          top: 0
+          left: 0
+          width: 50px
+          height: 50px
+          border-radius: 50%
+          background-size: cover
+          background-repeat: no-repeat
+          background-position: center
+          overflow: hidden
+      .text-testemonials 
+        color: $lite-green
+        font-size: 12px
+        display: none
+        p
+          color: $lite-blue
+          font-size: 10px
+        &.active
+          display: block
+          padding-left: 60px
+          padding-top: 5px
+.contacts_wrapper
+  padding-top: 50px
+  .sub_title_blue
+    padding-bottom: 8px
+    text-align: center
+  hr
+    width: 35px
+    margin: 0 auto
+  .row
+    padding-top: 25px
+    padding-bottom: 40px
+  .left_contacts_box
+    padding: 0 40px
+    .title
+      font-size: 26px
+      font-weight: bold
+    .text_container 
+      color: $lite-blue
+      font-size: 10px
+      padding: 20px 0 20px
+      font-weight: bold
+    .contacts_container
+      border-bottom: 1px solid $lite-blue
+      padding-bottom: 20px
+      position: relative
+      .sub_title
+        color: $lite-green
+        font-weight: bold
+        padding: 20px 0 10px
+        font-size: 14px
+        text-transform: uppercase
+      .number_box 
+        font-size: 12px
+        color: $gark-blue
+        line-height: 1.5
+        font-weight: bold
+      .location_box
+        position: absolute
+        bottom: 40px
+        right: 0
+        color: $lite-blue
+        display: inline-block
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 12px
+        cursor: pointer
+        svg
+          width: 15px
+          height: 15px
+        span
+          position: relative
+          bottom: 3px
+          padding-left: 5px
+        &:hover
+          color: $lite-green
+          transition: 0.3s
+          svg
+            *
+              fill: $lite-green
+    +breakpoint(small only)
+      margin-bottom: 30px
+      padding: 0
+  .right_contacts_box  
+    background-color: $lite-green
+    padding: 25px
+    position: relative
+    padding-bottom: 70px
+    .title
+      color: $dark-green
+      padding-top: 10px
+      font-size: 20px
+      font-weight: normal
+      text-transform: uppercase
+      +Ubuntu
+    .forms
+      padding: 20px 0
+      .input
+        padding-bottom: 20px
+        text-align: center
+        input
+          width: 100%
+          padding: 10px
+          outline: none !important
+          border: none
+          border-bottom: 1px solid white
+          background-color: $lite-green
+      .button
+        position: absolute
+        bottom: 0
+        left: 20px
+      button
+        height: 35px
+        width: 180px
+        background-color: $lite-green
+        border: 2px solid white
+        color: white
+        text-transform: uppercase
+        margin: 0 auto
+        border-radius: 20px
+        line-height: 30px
+        font-size: 12px
+        font-weight: bold
+        margin-bottom: 30px
+        text-decoration: none
+        cursor: pointer
+        display: inline-block
+        +Ubuntu
+        &:hover
+          background-color: white
+          color: $lite-green
+          transition: 0.3s
+        +breakpoint(small only)
+          height: 45px
+          width: 190px
+          line-height: 45px
+          font-size: 14px
+.map_box
+  position: relative
+  #map  
+    height: 400px
+    max-width: none
+
+
+
+      
+
+    
+
+
+
+
+
+
+
