@@ -26,6 +26,11 @@
     background-color: $lite-green
     color: white
     transition: 0.3s
+  +breakpoint(xxlarge only)
+    width: 240px
+    height: 50px
+    line-height: 50px
+    font-size: 16px
   +breakpoint(small only)
     height: 45px
     width: 190px
@@ -35,11 +40,17 @@
   font-size: 34px
   color: $lite-green
   font-weight: bold
+  +breakpoint(xxlarge only)
+    font-size: 42px
 .text_box
   color: $lite-blue
   font-size: 12px
   padding-top: 20px
   +Ubuntu
+  +breakpoint(xxlarge only)
+    font-size: 14px
+  +breakpoint(small only)
+    font-size: 18px
 .blue_bg
   background-color: #F4F4F4
 .sub_title_blue
@@ -48,6 +59,8 @@
   text-transform: uppercase
   font-weight: bold
   +Ubuntu
+  +breakpoint(xxlarge only)
+    font-size: 14px
 
 .hidden
   display: none

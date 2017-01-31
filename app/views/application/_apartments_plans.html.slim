@@ -1,20 +1,35 @@
-.plan_wrapper.blue_bg
+#plan.plan_wrapper.blue_bg
   .sub_title_blue планування
   hr
   .row
-    .large-4.medium-5.columns
+    .large-4.medium-6.columns
       .accordion-button.active data-attr="0"
-        .title_plan 1 поверх
+        .title_plan 
+          p.descktop 1 поверх
+          p.mobile 
+            |1 
+            span
+              |П
       .accordion-inner.active
         .sub_title_plan.active квартира №1
         .sub_title_plan квартира №2
       .accordion-button data-attr="1"
-        .title_plan 2 поверх
+        .title_plan
+          p.descktop 2 поверх
+          p.mobile 
+            |2
+            span
+              |П
       .accordion-inner
         .sub_title_plan.active квартира №1
         .sub_title_plan квартира №2
       .accordion-button data-attr="2"
-        .title_plan 3 поверх
+        .title_plan 
+          p.descktop 3 поверх
+          p.mobile 
+            |3
+            span
+              |П
       .accordion-inner
         .sub_title_plan.active квартира №1
         .sub_title_plan квартира №2
@@ -63,7 +78,7 @@
             br
             |— Подальше оздоблення буде виконуватись згідно побажань клієнта та дизайн-проекту, який спеціалісти нашої компанії виконають індивідуально за бажанням власників квартир.
 
-    .large-8.medium-7.columns
+    .large-8.medium-6.columns
       
       .apartment_wrapper.active 
         .flat_box.active
@@ -163,7 +178,50 @@
             .bg_apartaments.active style="background-image: url(#{asset_path('apartaments/qqq.jpg')})"
             .bg_apartaments style="background-image: url(#{asset_path('apartaments/tech-n-gen-if-required-custom-house-plan_homes-plan-3d_home-decor_tuscan-home-decor-websites-fleur-de-lis-decorating-blogs-blog-halloween-traditional-yosemite-decorators-rugs_972x729.png')})"
             .bg_apartaments style="background-image: url(#{asset_path('apartaments/render_RENDER_CHANGE1.png')})"
-          
+  .info_plan_box.mobile
+    .info_plan_padding
+      .ip_option.ipo_title
+        .ipo_value
+          |36
+        .ipo_key
+          | Загальна
+          br
+          | кількість квартир
+      .ip_option
+        .ipo_value
+          |12
+        .ipo_key
+          |квартир з власною
+          br
+          |територією
+      .ip_option
+        .ipo_value
+          |20
+        .ipo_key
+          |квартир з власною відкритою 
+          br
+          |терасою на даху
+      .ip_option
+        .ipo_value
+          |12
+        .ipo_key
+          |квартир з балконом
+          br
+          |терасного типу.
+      .sub_title Квартири передаються власнику в нульовому циклі, в якому передбачено:
+      .text_box
+        |— підігрів підлоги;
+        br
+        |— індивідуальне опалення;
+        br
+        |— поштукатурені та пошпакльовані стіни та стелі;
+        br
+        |— виведені електро мережі;
+        br
+        |— каналізація та вода.
+        br
+        |— Подальше оздоблення буде виконуватись згідно побажань клієнта та дизайн-проекту, який спеціалісти нашої компанії виконають індивідуально за бажанням власників квартир.
+        
 
 
 

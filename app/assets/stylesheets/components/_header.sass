@@ -3,6 +3,16 @@
   z-index: 100
   width: 100%
   +clearfix
+  transition-property: all
+  transform: translate(0,-100%)
+  transition: 1s
+  &.scrolled, &.visible
+    +translate(0,0)
+    position: fixed
+  &.visible
+    position: absolute
+  &.scrolled
+    // background-color: #fff
   .left_part
     float: left
     width: calc(100% - 200px)
@@ -23,13 +33,17 @@
       display: inline-block
       svg
         padding: 10px
+      +breakpoint(xxlarge only)
+        width: 110px
 
   .middle_part
     position: absolute
     top: 0
     left: 50%
     transform: translate(-50%,0)
-    +breakpoint(small only)
+    @media only screen and (max-width: 798px)
+      display: none
+    // +breakpoint(small only)
       display: none
     .menu
       display: inline-block
@@ -47,6 +61,12 @@
         &:hover
           border-bottom: 3px solid $lite-green
           color: $lite-green
+      +breakpoint(medium only)
+        .header_link
+          padding: 0px 10px
+      +breakpoint(xxlarge only)
+        .header_link
+          font-size: 14px
   .right_part
     float: right
     width: 200px
@@ -74,4 +94,6 @@
       color: white
       font-size: 12px
       text-transform: uppercase
+      +breakpoint(xxlarge only)
+        font-size: 15px
 

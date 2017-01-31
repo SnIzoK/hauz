@@ -1,4 +1,5 @@
 $('document').ready ->
+  new window.Feedback({})
 
   thumb = $('.thumbs .img_box')
   #     знаходим контейнер з картинками, що будуть змінюватись

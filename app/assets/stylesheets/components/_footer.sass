@@ -9,6 +9,11 @@
       height: 20px
       *
         fill: $lite-blue
+    +breakpoint(small only)
+      display: block
+      svg
+        width: 30px
+        height: 30px
   .footer_box
     display: inline-block
     font-size: 10px
@@ -16,4 +21,20 @@
     position: relative
     bottom: 3px
     left: 10px
+    +breakpoint(small only)
+      display: none
+    +breakpoint(xxlarge only)
+      font-size: 14px
+  .Grand_H
+    display: inline-block
+    font-size: 10px
+    color: $lite-blue
+    position: relative
+    bottom: 3px
+    left: 10px
+    +breakpoint(small only)
+      font-size: 14px
+    +breakpoint(xxlarge only)
+      font-size: 14px
+
     

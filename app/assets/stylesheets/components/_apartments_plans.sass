@@ -10,23 +10,45 @@
     margin: 0 auto
   .row
     padding-top: 50px
+    // position: relative
   .accordion-button 
     cursor: pointer
     border-bottom: 1px solid $lite-silver
     line-height: 2
     width: 95%
+    +breakpoint(small only)
+      display: inline-block
+      width: 33%
     .title_plan
       color: $lite-blue
       font-size: 30px
       +Ubuntu
+      .descktop
+        +breakpoint(small only)
+          display: none
+      .mobile
+        span
+          padding-left: 5px
+          font-size: 20px
+        +breakpoint(medium up)
+          display: none
+        
+      +breakpoint(xxlarge only)
+        font-size: 36px
     &:hover,&.active
       .title_plan
         color: $lite-green
   .accordion-inner 
     display: none
     overflow: hidden
+    // position: absolute
     &.active
       display: block
+    +breakpoint(small only)
+      z-index: 100
+      position: absolute
+      &.show, &.active
+        display: flex !important
     .sub_title_plan
       font-size: 12px
       color: $lite-blue
@@ -42,12 +64,23 @@
         margin-right: 10px
         border-radius: 50%
       +Ubuntu
+      +breakpoint(small only)
+        padding: 30px 20px
+      +breakpoint(xxlarge only)
+        font-size: 14px
       &:hover,&.active
         color: $lite-green
   .info_plan_box
     height: 100%
     background-color: white
     margin-top: 30px
+    display: none
+    +breakpoint(medium up)
+      display: block
+    &.mobile
+      display: none
+      +breakpoint(small only)
+        display: block
     .info_plan_padding
       padding: 20px
       .ip_option
@@ -66,12 +99,16 @@
           height: 50px
           line-height: 50px
           text-align: center
+          +breakpoint(xxlarge only)
+            font-size: 30px
 
         .ipo_key
           font-size: 12px
           color: $lite-blue
           padding: 10px
           flex-grow: 1
+          +breakpoint(medium only)
+            padding: 5px
         &.ipo_title
           margin-bottom: 20px
           .ipo_value
@@ -82,6 +119,13 @@
             background-color: #F4F4F4
             color: $lite-blue
             width: 200px
+            font-size: 16px
+            +breakpoint(small only)
+              font-size: 14px
+            +breakpoint(medium only)
+              font-size: 14px
+            +breakpoint(xxlarge only)
+              font-size: 18px
     .sub_title
       font-size: 12px
       color: $lite-blue
@@ -97,6 +141,8 @@
     display: none
     &.active
       display: block
+    +breakpoint(small only)
+      margin-top: 50px
     .thumbs
       display: inline-flex
       list-style: none
@@ -104,6 +150,8 @@
       top: 0
       left: 50%
       transform: translate(-50%, 0)
+      +breakpoint(small only)
+        top: 40px
       .img_box
         width: 90px
         height: 60px
@@ -135,6 +183,9 @@
           color: $lite-blue
           text-align: center
           +Ubuntu
+          +breakpoint(xxlarge only)
+            p
+              font-size: 12px
         &:hover,&.active
           opacity: 1
           .border_img
@@ -146,6 +197,8 @@
       position: relative
       top: 100px
       height: 400px
+      +breakpoint(small only)
+        top: 130px
       .bg_apartaments
         width: 80%
         height: 100%
@@ -156,6 +209,8 @@
         background-repeat: no-repeat
         background-position: center
         display: none
+        +breakpoint(xxlarge only)
+          width: 100%
         &.active
           display: block
 

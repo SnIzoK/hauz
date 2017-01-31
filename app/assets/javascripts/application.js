@@ -13,10 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
+//= require jquery_scrolldelta
+//= require header
+//= require anchor_link
 
 //= require owl.carousel
 
 //= require accordion
+//= require about_info
 //= require feedback
 //= require apartments
 //= require form

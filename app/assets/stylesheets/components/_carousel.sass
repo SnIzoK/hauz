@@ -1,0 +1,59 @@
+.carousel_testemonials
+  position: relative
+  padding-top: 50px
+  .testemonials
+    position: relative
+    background-color: $lite-green
+    color: #F9F9F9
+    padding: 30px 125px
+    font-size: 14px
+    line-height: 1.5
+    color: $lite-silver
+    +breakpoint(medium only)
+      padding: 30px 60px 30px 125px
+    &:before
+      content: "\201E"
+      position: absolute
+      left: 55px
+      bottom: 45px
+      font-size: 130px
+      color: $dark-green
+    +breakpoint(small only)
+      padding: 100px 65px 30px
+      &:before
+        top: -80px
+        left: 44%
+  .owl-carousel
+    list-style-type: none
+    padding: 30px
+    .testemonials_box
+      position: relative
+      height: 100px
+      .testemonials_img
+        position: absolute
+        top: 0
+        left: 0
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        overflow: hidden
+    .text-testemonials 
+      color: $lite-green
+      font-size: 12px
+      display: none
+      p
+        color: $lite-blue
+        font-size: 10px
+      &.active
+        display: block
+        padding-top: 60px
+  .svg_zrub
+    position: relative
+    left: 35%
+    width: 6%
+    +breakpoint(small only)
+      width: 10%
+      top: -1px

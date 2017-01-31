@@ -1,0 +1,810 @@
+.fullpage-banner
+  width: 100%
+  height: 100vh
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    width: 50%
+    height: 150%
+    background-color: black
+    opacity: 0.1
+    +rotate(10deg)
+    top: -25%
+    right: -25%
+    display: none
+  &:after
+    content: ''
+    position: absolute
+    width: 35vw
+    height: 60vh
+    background-image: url(#{asset_path('photo/index.png')})
+    background-repeat: repeat
+    top: 50%
+    +translate(0,-50%)
+    right: 0
+    display: none
+
+  @media #{$large-up}
+    &:before, &:after
+      display: block
+  .learn-more
+    position: absolute
+    bottom: 30px
+    text-align: center
+    left: 50%
+    +translate(-50%,0)
+    display: none
+    z-index: 1
+    cursor: pointer
+    svg
+      fill: $main
+      width: 34px
+      height: 40px
+    p
+      color: $main
+      text-transform: uppercase
+      font-size: 12px
+    @media #{$large-up}
+      display: block
+  .top-nav-wrapper
+    position: fixed
+    padding: 30px
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 110
+    +transition-property(all)
+    +transition-duration(1s)
+    +translate(0,-100%)
+    +clearfix
+    &.scrolled, &.visible
+      +translate(0,0)
+      position: fixed
+    &.visible
+      position: absolute
+    &.scrolled
+      background-color: #fff
+    .logo
+      display: inline-block
+      svg
+        width: 150px
+        height: 25px
+      span
+        position: relative
+        font-size: 20px
+        font-weight: bold
+        color: $dark
+        padding-left: 10px
+        top: -5px
+    .top-nav
+      position: relative
+      top: -5px
+      left: 30px
+      padding: 5px 20px
+      border-left: 1px solid $grey
+      display: none
+      li
+        display: inline-block
+        margin: 0 10px
+        a
+          text-transform: uppercase
+          font-size: 0.875rem
+          color: $main
+          +transition(0.1s)
+          cursor: pointer
+          &:hover
+            color: $orange
+    .menu-button
+      float: right
+      cursor: pointer
+      position: relative
+      z-index: 1
+      width: 50px
+      height: 40px
+      padding: 12px
+      top: -10px
+      right: -8px
+      .menu-button-lines
+        +burger(25px, 3px, 5px, $main, 1px)
+        position: absolute
+      @media #{$medium-up}
+        display: none
+
+    @media #{$small-only}
+      padding: 15px 10px
+      .logo
+        svg
+          width: 120px
+    @media #{$medium-only}
+      .logo
+        svg
+          width: 100px
+      .top-nav
+        left: 15px
+        padding: 5px
+        top: -8px
+        li
+          margin: 0 5px
+          a
+            font-size: 0.7rem
+    @media #{$medium-up}
+      .top-nav
+        display: inline-block
+  .inner
+    +clearfix
+    position: relative
+    margin-top: 100px
+    height: calc(100% - 100px)
+    @media #{$small-only}
+      height: calc(100vh)
+      margin-top: 60px
+      height: calc(100% - 60px)
+  .banner-text
+    position: relative
+    z-index: 1
+    height: 100%
+    .title
+      position: absolute
+      top: 5%
+      color: $dark
+      font-size: 1.5rem
+      line-height: 1.75rem
+      text-transform: uppercase
+      font-weight: bold
+    .middle-text
+      position: absolute
+      top: 40%
+      +translate(0,-50%)
+      svg
+        width: 40vw
+        height: 100px
+    .subtitle
+      color: $blue
+      font-size: 1rem
+      line-height: 1.25rem
+      +georgia
+      font-style: italic
+      position: relative
+      padding-left: 30px
+      max-width: 400px
+      span
+        position: absolute
+        left: 0
+        top: 0
+    .button-container
+      position: absolute
+      bottom: 15%
+      .regular
+        color: $blue
+        margin-bottom: 20px
+      span
+        color: $blue
+        +georgia
+        font-style: italic
+        margin: 0 20px
+      .sign-in
+        text-transform: uppercase
+        font-weight: bold
+        color: $main
+        +transition(0.2s)
+        &:hover
+          color: $orange
+    @media #{$small-only}
+      .title
+        font-size: 1.25rem
+        line-height: 1.6rem
+      .middle-text
+        svg
+          width: 180px
+          height: 40px
+      .subtitle
+        font-size: 0.875em
+        line-height: 1rem
+      .button-container
+        .regular, span
+          display: none
+        .sign-in
+          display: block
+          margin-top: 20px
+    @media #{$xxlarge-up}
+      .title
+        font-size: 2rem
+        text-transform: uppercase
+        font-weight: bold
+        line-height: 2.5rem
+      .middle-text
+        top: 35%
+        svg
+          width: 500px
+          height: 100px
+      .button-container
+        bottom: 30%
+  
+  .mobile-banner
+    position: absolute
+    width: 44%
+    right: 0
+    bottom: 0
+    @media #{$large-up}
+      display: none
+  
+  .slider-wrapper
+    widows: 100%
+    height: 80vh
+    position: relative
+    z-index: 1
+    display: none
+    @media #{$large-up}
+      display: block
+  .banner-slider, .monitor-background
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: 2
+    .bg-img
+      background-position: center
+      background-size: contain
+      height: 100%
+      background-repeat: no-repeat
+
+.problems-container
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    width: 200%
+    height: 100%
+    background-color: black
+    opacity: 0.1
+    +rotate(5deg)
+    top: -100px
+    left: -50%
+  .second
+    margin-top: 70px
+  .third
+    margin-top: 140px
+  .second, .third
+    @media #{$small-only}
+      margin-top: 20px
+    @media #{$medium-only}
+      margin-top: 30px
+  .problem-block
+    position: relative
+    padding-top: 60px
+    span
+      font-size: 8rem
+      color: $dark
+      opacity: 0.1
+      position: absolute
+      top: 0
+      font-weight: bold
+      line-height: 1
+    .text
+      margin-left: 80px
+      height: 200px
+    .name
+      color: $main
+      font-size: 2.125rem
+      text-transform: uppercase
+      font-weight: bold
+      line-height: 1
+      margin: 30px 0 10px
+    .description
+      color: $dark
+      font-weight: 300
+      line-height: 24px
+    .img-background
+      margin-top: 30px
+      height: 500px
+      position: relative
+    @media #{$small-only}
+      .text
+        margin-left: 50px
+        height: auto
+      .name
+        font-size: 1.75rem
+      .description
+        font-size: 0.875rem
+      .img-background
+        height: 200px
+        margin-top: 20px
+    @media #{$medium-only}
+      .text
+        margin-left: 50px
+        height: auto
+      .name
+        font-size: 2em
+      .description
+        font-size: 1em
+      .img-background
+        height: 400px
+    @media #{$large-up}
+      font-size: 1.125em
+
+.solution-container
+  position: relative
+  padding-top: 50px
+  .inner-text
+    position: relative
+    z-index: 1
+  svg
+    width: 500px
+    height: 100px
+  .text-container
+    padding-left: 5rem
+    .description
+      font-size: 1.25rem
+      font-weight: 300
+      color: $dark
+      max-width: 600px
+      margin-bottom: 2rem
+      span
+        font-weight: bold
+        text-transform: uppercase
+        color: $main
+      sup
+        color: $main
+        font-weight: bold
+        font-size: 50%
+        top: -1em
+  .button-container
+    .regular
+      color: $blue
+      margin-bottom: 30px
+  img
+    position: relative
+  @media #{$small-only}
+    padding-top: 0
+    svg
+      width: 300px
+    .text-container
+      padding-left: 4rem
+      .description
+        font-size: 1rem
+
+.opportunities-container
+  overflow: hidden
+  .opportunity
+    .text-block
+      height: 40vh
+      position: relative
+    .opportunity-icon
+      position: relative
+      width: 55px
+      height: 55px
+      background-color: $orange
+      text-align: center
+      svg
+        position: relative
+        width: 50%
+        fill: white
+        top: 50%
+        +translate(0,-50%)
+    .background-opportunity-icon
+      position: absolute
+      width: 370px
+      height: 480px
+      top: 0
+      left: 50%
+      +translate(-50%,0)
+      display: none
+      svg
+        fill: #f4f4f4
+      @media #{$large-up}
+        display: block
+    .name
+      position: relative
+      font-size: 1.625em
+      color: $main
+      text-transform: uppercase
+      +bold
+      margin: 20px 0
+    .description
+      position: relative
+      font-size: 1.125em
+      color: $blue
+      max-width: 500px
+    // .img-background
+    //   position: relative
+    //   background-size: contain
+    //   height: 50vh
+    //   background-repeat: no-repeat
+    //   +scale(1.4)
+    .img-container
+      text-align: center
+    img
+      max-height: 500px
+      @media #{$small-only}
+        max-height: 300px
+      @media #{$medium-only}
+        max-height: 400px
+      @media #{$xxlarge-up}
+        +scale(1.3)
+    .align-right
+      @media #{$large-up}
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-end
+        .description
+          text-align: right
+    @media #{$small-only}
+      padding: 50px 0 0
+      .text-block
+        height: auto
+      .name
+        margin: 10px 0
+        font-size: 1.5rem
+      .description
+        font-size: 1em
+      .img-background
+        +scale(1)
+        height: 300px
+    @media #{$medium-only}
+      padding: 80px 0 0
+      .text-block
+        height: auto
+      .img-background
+        +scale(1)
+        height: 400px
+      .description
+        max-width: none
+    @media #{$large-up}
+      padding: 50px 0
+    @media #{$xlarge-up}
+      padding: 150px 0
+
+  .opportunities
+    .opportunity-short
+      padding-left: 50px
+      position: relative
+      svg
+        position: absolute
+        left: 0.9375em
+        top: 0
+        fill: $orange
+      .name
+        position: relative
+        font-size: 1.25em
+        color: $main
+        text-transform: uppercase
+        +bold
+        height: 70px
+        line-height: 1
+        @media #{$xxlarge-up}
+          height: 50px
+        &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          height: 1px
+          width: 120px
+          background-color: $grey
+      .description
+        color: $blue
+        margin-top: 30px
+    @media #{$small-only}
+      margin-top: 30px
+      .opportunity-short
+        padding-left: 0.625rem
+        margin-top: 40px
+        svg
+          left: 0.625rem
+          top: -5px
+        .name
+          padding-left: 30px
+          height: auto
+          padding-bottom: 10px
+        .description
+          margin-top: 20px
+    @media #{$medium-only}
+      margin-top: 50px
+      .opportunity-short
+        margin-top: 50px
+        height: 200px
+    @media #{$landscape}
+      .opportunity-short
+        .name
+          font-size: 1em
+
+.slider-container
+  position: relative
+  margin: 100px 0 50px
+  overflow: hidden
+  @media #{$large-up}
+    height: 70vh
+  .blockquote-slider-img-container
+    height: 200px
+    @media #{$medium-only}
+      height: 400px
+  .blockquotes
+    height: 300px
+    @media #{$medium-only}
+      height: 400px
+  .blockquote-slider-img-container, .blockquotes
+    position: relative
+    float: left
+    width: 100%
+    @media #{$large-up}
+      width: 50%
+      height: 100%
+
+  .blockquote-slider-img
+    .makler-name
+      position: absolute
+      background-color: rgba(#253137, 0.8)
+      width: 250px
+      height: 90px
+      padding: 15px 30px
+      color: white
+      right: 0
+      bottom: 100px
+      .name
+        font-size: 1.375em
+        +medium
+      .position
+        font-size: 0.875em
+        +light
+  .blockquotes
+    background-color: $main
+    color: white
+    padding: 100px
+    .title
+      font-size: 2em
+      text-transform: uppercase
+      +bold
+    .subtitle
+      +light
+      opacity: 0.75
+      max-width: 400px
+    .blockquote-slider-text
+      li
+        position: relative
+        +georgia
+        font-size: 1.375em
+        font-style: italic
+        max-width: 80%
+        margin-top: 100px
+        &:after
+          content: '\0022'
+          font-size: 180px
+          color: #36464E
+          opacity: 0.5
+          line-height: 1
+          position: absolute
+          bottom: 0
+          right: 10%
+          +translate(0,-50%)
+  @media #{$small-only}
+    margin: 50px 0 0
+    .blockquote-slider-img
+      .makler-name
+        bottom: 0
+        width: 200px
+        height: 80px
+        padding: 10px 20px
+        .name
+          font-size: 1.25em
+    .blockquotes
+      padding: 30px
+      .title
+        font-size: 0.875rem
+      .subtitle
+        display: none
+      .blockquote-slider-text
+        li
+          max-width: 100%
+          margin-top: 30px
+          font-size: 1em
+          &:after
+            +translate(0,0)
+  @media #{$medium-only}
+    .blockquote-slider-img
+      .makler-name
+        bottom: 30px
+        width: 200px
+        height: 80px
+        padding: 10px 20px
+        .name
+          font-size: 1.25em
+    .blockquotes
+      padding: 50px
+      .title
+        font-size: 1em
+      .subtitle
+        display: none
+      .blockquote-slider-text
+        li
+          max-width: 100%
+          margin-top: 50px
+          font-size: 1rem
+  @media #{$landscape}
+    .blockquote-slider-img
+      .makler-name
+        bottom: 50px
+        width: 200px
+        height: 80px
+        padding: 10px 20px
+        .name
+          font-size: 1.25em
+    .blockquotes
+      padding: 50px
+      .title
+        font-size: 1.5em
+      .subtitle
+        font-size: 0.875em
+      .blockquote-slider-text
+        li
+          max-width: 100%
+          margin-top: 30px
+          font-size: 1.125rem
+
+
+.usability-container
+  overflow: hidden
+  .video-step-wrapper
+    position: relative
+    max-width: 1000px
+    margin: 50px auto
+    .step-block-container
+      +clearfix
+    .step-block
+      float: left
+      width: calc(1 / 3 * 100%)
+      cursor: pointer
+      position: relative
+      color: $dark
+      opacity: 0.3
+      padding-top: 50px
+      padding-left: 66px
+      height: 200px
+      +transition(0.25s)
+      span
+        font-size: 100px
+        +bold
+        position: absolute
+        left: 0
+        top: 0px
+        line-height: 1
+      .step
+        font-size: 1.875em
+      .description
+        display: none
+        line-height: 21px
+        @media #{$large-up}
+          display: block
+      &.active-step-block
+        opacity: 1
+        span
+          color: $orange
+    .line-container
+      width: 100%
+      height: 8px
+      position: relative
+      .line
+        position: absolute
+        height: 100%
+        width: 33.3%
+        background-color: $orange
+        top: 0
+        left: 0
+        +transition(0.25s)
+        +animation-timing-function(cubic-bezier(0.165, 0.84, 0.44, 1))
+        &.active-line-position
+          left: 0
+    .video-container
+      height: 600px
+      max-height: 90vh
+      position: relative
+      box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25)
+      &:after
+        content: ''
+        position: absolute
+        width: 200%
+        height: 80%
+        top: 10%
+        left: -50%
+        background-color: $dark
+      .video
+        position: absolute
+        width: 100%
+        height: 100%
+        display: none
+        z-index: 1
+        &.show-it
+          display: block
+        iframe
+          width: 100%
+          height: 100%
+          
+  @media #{$small-only}
+    .video-step-wrapper
+      margin: 10px 0.625em 50px
+      .step-block
+        height: 80px
+        padding-top: 42px
+        padding-left: 50px
+        span
+          font-size: 60px
+          left: 10px
+          top: 10px
+        .step
+          font-size: 1.25em
+      .video-container
+        height: 300px
+  @media #{$medium-only}
+    .video-step-wrapper
+      margin: 50px 0.9375em
+      .step-block
+        height: 100px
+
+.contacts-container
+  background-color: $dark
+  padding: 120px 0 50px
+  margin-top: -80px
+  .title
+    +medium
+    font-size: 1.3125rem
+    color: white
+    margin-bottom: 20px
+  .description
+    font-size: 0.875rem
+    color: #AFBDC4
+    +light
+  ul
+    color: #AFBDC4
+    li
+      position: relative
+      line-height: 40px
+      padding-left: 30px
+      span
+        position: absolute
+        left: 0
+        top: 2px
+        width: 24px
+        height: 30px
+        svg
+          fill: #AFBDC4
+  .social-container
+    padding-top: 50px
+  @media #{$small-only}
+    padding: 80px 0 50px
+    .title
+      margin-top: 30px
+    .social-container
+      padding-right: 30px
+      text-align: center
+      .social
+        float: none
+
+.footer
+  +clearfix
+  font-size: 12px
+  line-height: 70px
+  background-color: #2C393F
+  .v-studio
+    float: left
+    color: #AFBDC4
+    +transition(0.25s)
+    svg
+      fill: #AFBDC4
+      width: 25px
+      display: inline-block
+      margin-right: 15px
+      position: relative
+      top: 5px
+      +transition(0.25s)
+    span
+      @media #{$small-only}
+        display: none
+    a
+      color: #AFBDC4
+      &:hover
+        color: $orange
+  .appworld
+    float: right
+    color: #AFBDC4

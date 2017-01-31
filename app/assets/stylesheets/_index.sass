@@ -11,6 +11,19 @@
     bottom: 0
     background-size: cover
     background-position: center
+  .main_baner_gradient_layer
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%) /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%) /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ) /* IE6-9 */
+    opacity: 0.3
+    height: 70%
+
   .main_baner_box
     position: absolute
     bottom: 0
@@ -21,18 +34,23 @@
       font-weight: bold
       text-transform: uppercase
       color: white
+      +breakpoint(xxlarge only)
+        font-size: 82px
       +breakpoint(small only)
         font-weight: normal
         line-height: 1
         padding-bottom: 20px
+        font-size: 50px
     .sub_title_baner
       font-size: 15px
       font-style: italic
       color: white
       padding-bottom: 30px
       +Ubuntu
+      +breakpoint(xxlarge only)
+        font-size: 23px
       +breakpoint(small only)
-        font-size: 16px
+        font-size: 18px
     .learn_more
       text-transform: uppercase
       font-size: 8px
@@ -58,6 +76,8 @@
     bottom: 10px
     color: $lite-silver
     font-size: 10px
+    +breakpoint(xxlarge only)
+      font-size: 14px
     +breakpoint(small only)
       display: none
     .number_box
@@ -83,6 +103,11 @@
       font-size: 10px
       float: right
       padding-left: 10px
+    +breakpoint(xxlarge only)
+      .svg_icon_location
+        width: 30px
+      .location_street
+        font-size: 13px
 .about_house_selection
   position: relative
   padding-bottom: 50px
@@ -95,6 +120,8 @@
     z-index: 10
     img
       width: 500px
+    +breakpoint(midle only)
+      left: -210px
     +breakpoint(small only)
       position: relative
       top: 0
@@ -133,6 +160,8 @@
       width: 450px
       font-style: italic
       font-weight: normal
+    +breakpoint(xxlarge only)
+      width: 600px
     +breakpoint(small only)
       font-weight: normal
       .text_box
@@ -151,9 +180,11 @@
     .about_text
       font-size: 10px
       color: #F6921E
+    +breakpoint(xxlarge only)
+      font-size: 16px
     +breakpoint(medium only)
-      display: block
-      padding: 10px
+      //display: block
+      //padding: 10px
     +breakpoint(small only)
       display: block
       padding: 10px
@@ -234,20 +265,38 @@
         padding-left: 5px
     .text_box
       padding-bottom: 10px
+      &.hidden
+        display: none
     .more_info
+      position: relative
       color: $lite-green
-      text-decoration: none
-      font-size: 12px
-      +Ubuntu
+      cursor: pointer
+      
+      &:before, &:after
+        +transition(0.1s)
+        position: absolute
+        top: 0
+        left: 0
+        +Ubuntu
+      &:before
+        content: '+ показати быльше'
+      &:after
+        content: '- показати менше'
+        opacity: 0
+      &.opened
+        &:before
+          opacity: 0
+        &:after
+          opacity: 1
       svg
         fill: $lite-green
         width: 12px
         position: relative
         top: 3px
-      a
-        cursor: pointer
       &:hover
         color: darken(#82BC00, 5)
+
+
     +breakpoint(small only)
       margin-bottom: 50px
       .sub_title
@@ -288,14 +337,20 @@
       width: 350px
       padding-top: 80px
       margin-bottom: 20px
+    +breakpoint(xxlarge only)
+      .text_box
+        font-size: 14px
     +breakpoint(small only)
       text-align: center
+      width: 100%
       .title
         width: 100%
       hr
         margin: 0 auto
       .text_box
         font-size: 18px
+      .information_box
+        font-size: 14px
 
   .sales_warapper_right_box
     position: absolute
@@ -318,6 +373,9 @@
       background-size: cover
       background-repeat: no-repeat
       background-position: top
+      +breakpoint(xxlarge only)
+        background-size: contain
+        background-position: left
     .sale_container
       position: absolute
       bottom: 0
@@ -334,51 +392,17 @@
         padding-top: 10px 20px
         line-height: 1.5
         margin-bottom: 20px
+      +breakpoint(xxlarge only)
+        .text
+          font-size: 14px
 .testemonials_wrapper
-  height: 400px
   padding-top: 50px
-  
   .sub_title_blue
     padding-bottom: 8px
     text-align: center
   hr
     width: 35px
     margin: 0 auto
-  .carousel_testemonials
-    padding-top: 50px
-    .testemonials
-      background-color: $lite-green
-      color: #F9F9F9
-      padding: 30px 65px
-      font-size: 12px
-    .owl-carousel
-      list-style-type: none
-      padding: 30px
-      .testemonials_box
-        position: relative
-        height: 100px
-        .testemonials_img
-          position: absolute
-          top: 0
-          left: 0
-          width: 50px
-          height: 50px
-          border-radius: 50%
-          background-size: cover
-          background-repeat: no-repeat
-          background-position: center
-          overflow: hidden
-      .text-testemonials 
-        color: $lite-green
-        font-size: 12px
-        display: none
-        p
-          color: $lite-blue
-          font-size: 10px
-        &.active
-          display: block
-          padding-left: 60px
-          padding-top: 5px
 .contacts_wrapper
   padding-top: 50px
   .sub_title_blue
@@ -438,6 +462,20 @@
           svg
             *
               fill: $lite-green
+    +breakpoint(xxlarge only)
+      .title
+        font-size: 36px
+      .text_container
+        font-size: 14px
+        .contacts_container
+          .sub_title
+            font-size: 18px
+          .number_box 
+            font-size: 16px
+          .location_box
+            text-decoration: none
+            font-size: 14px
+            text-decoration: none
     +breakpoint(small only)
       margin-bottom: 30px
       padding: 0
@@ -453,6 +491,10 @@
       font-weight: normal
       text-transform: uppercase
       +Ubuntu
+    +breakpoint(xxlarge only)
+      padding-bottom: 90px
+      .title
+        font-size: 24px
     .forms
       padding: 20px 0
       .input
