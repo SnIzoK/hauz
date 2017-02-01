@@ -59,7 +59,12 @@
       cursor: pointer
       text-decoration: none
       display: block
+      transition: 0.5s
+      width: 100px
+      margin: 0 auto
       +Ubuntu
+      &:hover
+        transform: translate(0,-10px)
       +breakpoint(small only)
         display: none
       .svg_icon
@@ -120,6 +125,8 @@
     z-index: 10
     img
       width: 500px
+    +breakpoint(xlarge up)
+      width: 50%
     +breakpoint(midle only)
       left: -210px
     +breakpoint(small only)
@@ -156,12 +163,16 @@
     right: 0
     padding-top: 100px
     font-weight: bold
+    .title
+      +breakpoint(xlarge up)
+        width: 900px
     .text_box
       width: 450px
       font-style: italic
       font-weight: normal
-    +breakpoint(xxlarge only)
+    +breakpoint(xlarge up)
       width: 600px
+      font-size: 18px
     +breakpoint(small only)
       font-weight: normal
       .text_box
@@ -198,6 +209,8 @@
   height: 100%
   width: 100%
   overflow: hidden
+  +breakpoint(xlarge up)
+    padding-bottom: 50px
   .about_wrapper_bg
     position: absolute
     bottom: -7%
@@ -233,7 +246,8 @@
   .about_hauses_conteiner
     position: relative
     width: 100%
-    height: 450px
+    +breakpoint(medium only)
+      height: 550px
     .img_container
       position: relative
       margin-bottom: 20px
@@ -267,6 +281,7 @@
       padding-bottom: 10px
       &.hidden
         display: none
+        padding-bottom: 30px
     .more_info
       position: relative
       color: $lite-green
@@ -462,6 +477,8 @@
           svg
             *
               fill: $lite-green
+        +breakpoint(medium only)
+          font-size: 10px
     +breakpoint(xxlarge only)
       .title
         font-size: 36px
@@ -473,9 +490,7 @@
           .number_box 
             font-size: 16px
           .location_box
-            text-decoration: none
             font-size: 14px
-            text-decoration: none
     +breakpoint(small only)
       margin-bottom: 30px
       padding: 0

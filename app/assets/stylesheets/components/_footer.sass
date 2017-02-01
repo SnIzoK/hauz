@@ -2,6 +2,7 @@
   height: 100%
   width: 100%
   text-align: center
+  padding: 10px
   .footer_svg
     display: inline-block
     svg
@@ -20,11 +21,15 @@
     color: $lite-blue
     position: relative
     bottom: 3px
-    left: 10px
+    margin-left: 10px
     +breakpoint(small only)
       display: none
     +breakpoint(xxlarge only)
       font-size: 14px
+  .dot
+    padding: 0 10px
+    color: $lite-blue
+    display: inline-block
   .Grand_H
     display: inline-block
     font-size: 10px

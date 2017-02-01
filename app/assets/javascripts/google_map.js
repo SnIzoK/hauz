@@ -14,8 +14,8 @@ map = void 0;
 initialize = function() {
   var $map, address, city, contentString, infowindow, lat, lng, mapOptions, marker, myLatlng, styledMap, styles;
   $map = $('#map');
-  lat = "49.841910"
-  lng = "24.031556"
+  lat = "49.815942"
+  lng = "24.140180"
   address = $map.attr('data-address');
   city = $map.attr('data-city');
   myLatlng = new google.maps.LatLng(lat, lng);
@@ -40,14 +40,14 @@ initialize = function() {
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
   map.mapTypes.set("map_style", styledMap);
   map.setMapTypeId("map_style");
-  contentString = "<div id=\"content\">" + "<div id=\"siteNotice\">" + "</div><div class=\"info-window\"><div class=\"address\"><p>Компанія «»</p><p>" + address + "</p></div></div>" + "</div>";
+  contentString = "<div id=\"content\">" + "<div id=\"siteNotice\">" + "</div><div class=\"info-window\"><div class=\"address\"><p class=\"infowindow\">Grand House</p><p>" + address + "</p></div></div>" + "</div>";
   infowindow = new google.maps.InfoWindow({
     content: contentString
   });
   marker = new google.maps.Marker({
     position: myLatlng,
     map: map,
-    title: 'Lviv',
+    title: 'Vunnuki',
     icon: 'assets/GH-location-icon.png'
   });
   return google.maps.event.addListener(marker, 'click', function() {

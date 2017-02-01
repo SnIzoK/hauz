@@ -4,14 +4,14 @@
   .main_baner_box
     .title_baner житло вашої мрії
     .sub_title_baner Будинок котеджного типу з закритою територією у Винниках
-    a.button href="/" замовити огляд
+    a.button href="#contacts" замовити огляд
     a.learn_more href="#about1"
       |дізнаись більше
       .svg_icon = inline_svg "svg/mouse.svg"
   .contact_facebock_box
     .number_box +38 068 644 33 44
     span.vertical_line |
-    a.facebock_box href="/" Facebock
+    a.facebock_box href="info@grandhouse.com" Facebock
   a.location_box href="#map"
     .svg_icon_location = inline_svg "svg/GH-location-v1.svg"
     .location_street
@@ -58,7 +58,7 @@
     .text_box Найвища якість, авторський проект, зручне розташування, справедлива ціна.
     .text_box У житловому комплексі GrandHouse враховані усі сучасні вимоги до якісного заміського життя.
   .row
-    .large-3.medium-3.columns
+    .large-3.medium-6.columns
       .about_hauses_conteiner
         .img_container
           .bg-img style="background-image: url(#{asset_path('about/GB-pictures-v1-1.jpg')})"
@@ -71,7 +71,7 @@
         .text_box.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eligendi error dolore officiis, rerum odio ab accusamus et vel, eius quidem non harum, fugit ipsam sapiente ex sint commodi officia?
         .more_info
           
-    .large-3.medium-3.columns
+    .large-3.medium-6.columns
       .about_hauses_conteiner
         .img_container
           .bg-img style="background-image: url(#{asset_path('about/GB-pictures-v1-2.jpg')})"
@@ -84,7 +84,7 @@
         .text_box.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eligendi error dolore officiis, rerum odio ab accusamus et vel, eius quidem non harum, fugit ipsam sapiente ex sint commodi officia?
         .more_info
           
-    .large-3.medium-3.columns
+    .large-3.medium-6.columns
       .about_hauses_conteiner
         .img_container
           .bg-img style="background-image: url(#{asset_path('about/GB-pictures-v1-3.jpg')})"
@@ -96,7 +96,7 @@
         .text_box Унікальна пропозиція від ЖК "GrandHouse" - відкрита тераса на даху будинку з електричним підігрівом. Тут є над чим задуматись: облаштувати терасу басейном чи площадкою для міні-гольфу? а може шезлонг і сонячні ванни?
         .text_box.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eligendi error dolore officiis, rerum odio ab accusamus et vel, eius quidem non harum, fugit ipsam sapiente ex sint commodi officia?
         .more_info
-    .large-3.medium-3.columns
+    .large-3.medium-6.columns
       .about_hauses_conteiner
         .img_container
           .bg-img style="background-image: url(#{asset_path('about/GB-pictures-v1-4.jpg')})"
@@ -117,7 +117,7 @@
         hr
         .title Перим п`ятьом покупцям унікальна пропозиція
         .text_box Підземний паркінг в подарунок
-        a.button href="/" замовити огляд
+        a.button href="#contacts" замовити огляд
         .information_box * Вартість підземного паркінгу 4500$ Загальна кількість парковочних місць обмежена - 30 а/м
   .sales_warapper_right_box
     .bg_sales_warapper style="background-image: url(#{asset_path('sales/GB-special-picture-v1-1.jpg')})"
@@ -184,7 +184,7 @@
                 button.button
                   | НАДІСЛАТИ
 .map_box
-  #map
+  #map data-address="вул. Лисика, м. Винники Львів, Україна"
 
 
 
