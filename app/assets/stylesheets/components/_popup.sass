@@ -1,0 +1,44 @@
+.popup
+  display: none
+  position: absolute
+  z-index: 100
+  &.active
+    display: block
+    
+  .popup-window
+    position: fixed
+    top: 40%
+    left: 50%
+    transform: translate(-40%,-50%)
+    +breakpoint(small only)
+      left: 40%
+      transform: translate(-40%,-40%)
+
+
+  .popup-overlay
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0,0,0,0.6)
+  .popup-close-button
+    position: absolute
+    top: 10px
+    right: 20px
+    cursor: pointer
+    z-index: 2
+    svg
+      width: 20px
+  .popup-content
+    width: 500px
+    +breakpoint(small only)
+      width: 300px
+    .title
+
+body.has-opened-popup
+  main
+    overflow: hidden
+    max-height: 100vh
+  .footer 
+    display: none

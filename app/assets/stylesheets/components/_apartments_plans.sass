@@ -1,5 +1,5 @@
 .plan_wrapper
-  padding-top: 40px
+  padding-top: 80px
   width: 100%
   height: 100%
   .sub_title_blue
@@ -16,6 +16,7 @@
     border-bottom: 1px solid $lite-silver
     line-height: 2
     width: 95%
+    +Ubuntu
     +breakpoint(small only)
       display: inline-block
       width: 33%
@@ -24,9 +25,11 @@
       font-size: 30px
       +Ubuntu
       .descktop
+        +Ubuntu
         +breakpoint(small only)
           display: none
       .mobile
+        +Ubuntu
         span
           padding-left: 5px
           font-size: 20px
@@ -38,12 +41,19 @@
     &:hover,&.active
       .title_plan
         color: $lite-green
+        +Ubuntu
+    &.opened
+      border-bottom: 0
   .accordion-inner 
     display: none
     overflow: hidden
     // position: absolute
     &.active
       display: block
+      
+    &.show
+      border-bottom: 1px solid $lite-silver
+      padding-bottom: 10px
     +breakpoint(small only)
       z-index: 100
       position: absolute
@@ -63,6 +73,7 @@
         background-color: $lite-green
         margin-right: 10px
         border-radius: 50%
+        margin-bottom: 3px
       +Ubuntu
       +breakpoint(small only)
         padding: 30px 20px
@@ -93,12 +104,13 @@
           font-size: 24px
           // padding: 20px 0 
           color: $lite-green
-          border-left: 1px solid $lite-green
-          border-right: 1px solid $lite-green
+          border-left: 1px solid $lite-silver
+          border-right: 1px solid $lite-silver
           width: 50px
           height: 50px
           line-height: 50px
           text-align: center
+          +Ubuntu          
           +breakpoint(xxlarge only)
             font-size: 30px
 
@@ -107,6 +119,8 @@
           color: $lite-blue
           padding: 10px
           flex-grow: 1
+          text-transform: uppercase
+          +Ubuntu
           +breakpoint(medium only)
             padding: 5px
         &.ipo_title
@@ -115,16 +129,36 @@
             font-size: 30px
             background-color: $lite-green
             color: white
+            border: 0
           .ipo_key
             background-color: #F4F4F4
             color: $lite-blue
-            width: 200px
+            width: 270px
             font-size: 14px
+            font-weight: bold
+
     .sub_title
       font-size: 12px
       color: $lite-blue
-      padding-top: 10px
-
+      padding: 15px 0 20px
+      +Ubuntu
+      line-height: 1.5
+    ul
+      position: relative
+      padding-left: 20px
+      +Ubuntu
+      .list_box
+        list-style: none
+        padding: 5px 0
+        color: $lite-blue
+        font-size: 14px
+        +Ubuntu
+        &:before
+          content: '\2014'
+          display: inline-block
+          padding-right: 5px
+          position: absolute
+          left: 0
   .apartment_wrapper
     display: none
     &.active
@@ -147,15 +181,15 @@
       +breakpoint(small only)
         top: 40px
       .img_box
-        width: 90px
-        height: 60px
+        width: 120px
+        height: 95px
         // background-color: #EDEDED
         opacity: 0.25
         cursor: pointer
         transition: 0.25s
         .border_img
           width: 100%
-          height: 50px
+          height: 75px
           position: relative
           +my_horizontal_align
           background: #EDEDED
@@ -169,13 +203,14 @@
             height: 80%
             margin: auto
         p
-          font-size: 8px
+          font-size: 12px
           padding-top: 10px
           text-transform: uppercase
           opacity: 0
           transition: 0.2s
           color: $lite-blue
           text-align: center
+          letter-spacing: 1px
           +Ubuntu
           +breakpoint(xxlarge only)
             p
@@ -191,6 +226,12 @@
       position: relative
       top: 100px
       height: 400px
+      width: 100%
+      +breakpoint(xlarge only)
+        height: 600px
+      +breakpoint(xxlarge only)
+        height: 700px
+        width: 900px
       +breakpoint(small only)
         top: 130px
       .bg_apartaments

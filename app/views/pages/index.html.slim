@@ -4,14 +4,14 @@
   .main_baner_box
     .title_baner житло вашої мрії
     .sub_title_baner Будинок котеджного типу з закритою територією у Винниках
-    a.button href="#contacts" замовити огляд
+    .button.popup_button замовити огляд
     a.learn_more href="#about1"
-      |дізнаись більше
+      |дізнатсь більше
       .svg_icon = inline_svg "svg/mouse.svg"
   .contact_facebock_box
-    .number_box +38 068 644 33 44
+    a.number_box href="tel:+380686443344" +38 068 644 33 44
     span.vertical_line |
-    a.facebock_box href="info@grandhouse.com" Facebock
+    a.facebock_box href="mailto:info@grandhouse.com" Facebook
   a.location_box href="#map"
     .svg_icon_location = inline_svg "svg/GH-location-v1.svg"
     .location_street
@@ -29,7 +29,7 @@
       .house_selections
         .title Правильний вибір &#171;GrandHouse&#187;
         .text_box Правильний вибір місця проживання дуже важливий процес. Сучасний покупець добре обізнаний, що вдале місце розташування його житла гарантує багато переваг їх власникам. Тому будинки, які знаходяться недалеко від Львова дуже привабливі для купівлі. Хто відмовиться оселитися з родиною на зеленій та тихій вулиці?
-        .text_box Переваги такого вибору очевидні, оскільки ціна придбання виправдана його вигодою. В нас Ви можете купити квартиру у м. Винники Львів підвищеного комфорту в ЖК “GrandHouse” від забудовника.
+        .text_box.italic Переваги такого вибору очевидні, оскільки ціна придбання виправдана його вигодою. В нас Ви можете купити квартиру у м. Винники Львів підвищеного комфорту в ЖК “GrandHouse” від забудовника.
       .about_house_conteiner
         .svg_container = inline_svg "svg/GH-icons-v1-1.svg"
         .about_text
@@ -79,7 +79,7 @@
         .sub_title
           |2.
           span
-            |Інфраструктура
+            |Підземний паркінг
         .text_box На території Житлового комплексу "GrandHouse" облаштовано закритий підземний паркінг на 30 автомобілів. Це безперечна перевага сучасної інфраструктури та неймовірний комфорт для автовласників
         .text_box.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eligendi error dolore officiis, rerum odio ab accusamus et vel, eius quidem non harum, fugit ipsam sapiente ex sint commodi officia?
         .more_info
@@ -92,7 +92,7 @@
         .sub_title
           |3.
           span
-            |Інфраструктура
+            |Тераса
         .text_box Унікальна пропозиція від ЖК "GrandHouse" - відкрита тераса на даху будинку з електричним підігрівом. Тут є над чим задуматись: облаштувати терасу басейном чи площадкою для міні-гольфу? а може шезлонг і сонячні ванни?
         .text_box.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eligendi error dolore officiis, rerum odio ab accusamus et vel, eius quidem non harum, fugit ipsam sapiente ex sint commodi officia?
         .more_info
@@ -104,7 +104,7 @@
         .sub_title
           |4.
           span
-            |Інфраструктура
+            |Земельна ділянка
         .text_box Квартира з власною земельною ділянкою - унікальна ідея архітекторів для створення повноцінної атмосфери заміського життя
         .text_box.hidden Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eligendi error dolore officiis, rerum odio ab accusamus et vel, eius quidem non harum, fugit ipsam sapiente ex sint commodi officia?
         .more_info
@@ -123,7 +123,7 @@
     .bg_sales_warapper style="background-image: url(#{asset_path('sales/GB-special-picture-v1-1.jpg')})"
     .sale_container
       .svg_conteiner = inline_svg "sales/HG-white-hren-v1.svg"
-      .text + пыздемний паркынг в подарунок
+      .text + пiздемний паркынг в подарунок
 = render "apartments_plans"
 #testemonials.testemonials_wrapper
   .sub_title_blue відгуки
@@ -142,10 +142,11 @@
             .text_container У разі виникнення запитань, зв’яжіться з нами, або напишіть нам, і ми максимально швидко дамо відповіді на всі ваші питання.
             .contacts_container
               .sub_title Дзвоніть
-              .number_box +38 068 644 33 44
+              a.number_box href="tel:+380686443344"
+                |+38 068 644 33 44
             .contacts_container
               .sub_title Пишіть
-              .number_box
+              a.number_box href="mailto:info@grandhouse.com" 
                 |info@grandhouse.com
                 br
                 |facebook
@@ -161,30 +162,21 @@
                   |Як добратися
 
         .large-6.medium-6.columns
-          .right_contacts_box
-            .title Замовте огляд
-            .forms
-              form
-                .input.input-field
-                  input#first_name name="firstname"
-                  label Як вас звати?
-                  span.bar
-                .input.input-field
-                  input#phone name="tel"
-                  label номер телефон
-                  span.bar
-                .input.input-field
-                  input#first_name name="firstname"
-                  label електронна скринька?
-                  span.bar
-                .input.input-field
-                  input#phone name="tel"
-                  label повідомлення
-                  span.bar
-                button.button
-                  | НАДІСЛАТИ
-.map_box
-  #map data-address="вул. Лисика, м. Винники Львів, Україна"
+          =render "form"
 
 
+#googleMapWrapper.map-wrapper
+  .marker
+    .marker-icon.svg-icon.svg-icon-location
+      img src="assets/GH-location-icon.png"
+  .info-window
+    .zrub = inline_svg "GH-corner-v1-01.svg"
+    .logo = inline_svg "svg/GH-full-logo-v1-01.svg"
+    .address вул. Лисика, м. Винники, Львів, Україна
+    a.number_box href="tel:+380686443344"
+      |+38 068 644 33 44
+    a.number_box href="mailto:info@grandhouse.com" 
+      |info@grandhouse.com
+  #map-container.map-container
+  / #map data-address="вул. Лисика, м. Винники Львів, Україна"
 

@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require underscore
 //= require jquery_scrolldelta
+//= require global
+//= require clickout
 //= require header
 //= require anchor_link
 
@@ -25,4 +27,7 @@
 //= require feedback
 //= require apartments
 //= require form
-//= require google_map
+//= require popup
+// require google_map
+//= require google_map_new
+//= require richmarker

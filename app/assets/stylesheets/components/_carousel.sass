@@ -8,16 +8,19 @@
     padding: 30px 125px
     font-size: 14px
     line-height: 1.5
-    color: $lite-silver
+    color: #F9F9F9
     +breakpoint(medium only)
       padding: 30px 60px 30px 125px
     &:before
       content: "\201E"
       position: absolute
       left: 55px
-      bottom: 45px
+      bottom: 22px
       font-size: 130px
       color: $dark-green
+    +breakpoint(medium only)
+      &:before
+        bottom: 63px
     +breakpoint(small only)
       padding: 100px 65px 30px
       &:before
@@ -45,9 +48,11 @@
       color: $lite-green
       font-size: 12px
       display: none
+      +Ubuntu
       p
         color: $lite-blue
         font-size: 10px
+        padding-top: 5px
       &.active
         display: block
         padding-top: 60px
@@ -58,3 +63,6 @@
     +breakpoint(small only)
       width: 10%
       top: -1px
+.owl-page.active
+  span
+    background: #F6921E !important
