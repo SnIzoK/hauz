@@ -224,7 +224,7 @@
       //padding: 10px
     +breakpoint(small only)
       display: block
-      padding: 25px
+      padding: 25px 0 20px
       font-size: 16px
       .svg_container
         svg
@@ -233,6 +233,9 @@
         font-size: 12px
     &.midle
       top: 40px
+    &.last
+      +breakpoint(small only)
+        margin-bottom: 40px
 .about_wrapper
   position: relative
   height: 100%
