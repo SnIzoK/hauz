@@ -3,6 +3,7 @@
   width: 100%
   text-align: center
   padding: 10px
+  position: relative
   .footer_svg
     display: inline-block
     svg
@@ -43,5 +44,20 @@
     left: 10px
     +breakpoint(small only)
       font-size: 14px
+  .svg_arrow
+    position: absolute
+    bottom: 5px
+    right: 5px
+    transform: rotate(-90deg)
+    svg
+      width: 20px
+      height: 20px
+      *
+        fill: $lite-blue
+      &:hover
+        *
+          fill: $lite-green
+
+
 
     
